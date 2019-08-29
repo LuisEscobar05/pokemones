@@ -1,0 +1,20 @@
+<button class="btn btn-warning" routerLink="crear">crear</button>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of pokemon" class="card col-md-3 col-md-sm-6" style="width: 18rem;">
+            <img src="{{item.image}}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">
+                CP: <strong>{{item.cp}}</strong><br>
+                Tipo: <strong>{{item.type}}</strong><br>
+                Generacion: <strong>{{item.generation}}</strong>
+              </p>
+              <button class="btn btn-primary" routerLink="editar">Editar</button>
+              &nbsp;<!-- forma de poner espacio -->
+              <button class="btn btn-danger">Eliminar</button>
+            </div>
+          </div>
+    </div>
+</div>
+
